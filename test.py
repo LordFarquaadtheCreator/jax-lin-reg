@@ -4,10 +4,10 @@ if __name__ == "__main__":
     import jax.numpy as jnp
 
     x = jnp.array([1, 2, 3, 4, 5])
-    y = jnp.array([3,5,6,7,8,12,14])
+    y = jnp.array([3,6,7,8,9])
 
-    func = main(x, y)
+    func, loss = main(x, y)
 
     fahad = func(6)
 
-    print(f"Result: {fahad}")
+    print(f"Result: {fahad} | Loss: {loss}")

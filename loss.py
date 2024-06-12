@@ -3,6 +3,12 @@ from timer import timer
 
 @timer
 def mse(y_acc: list, y_pred: list):
+    """
+    returns the mean squared error between the actual and predicted values
+    input:
+        y_acc: list of actual values
+        y_pred: list of predicted values
+    """
     import jax.numpy as np
     import jax.lax as lax
 
