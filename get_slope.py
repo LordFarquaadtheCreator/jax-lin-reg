@@ -1,7 +1,5 @@
-import jax.numpy as np
-
-
 def get_slope(x: list, y: list) -> float:
+    import jax.numpy as np
     sum_xy: int = 0
     sum_xx: int = 0
 
