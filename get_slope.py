@@ -1,4 +1,3 @@
-import jax
 import jax.numpy as np
 
 
@@ -6,8 +5,8 @@ def get_slope(x: list, y: list) -> float:
     sum_xy: int = 0
     sum_xx: int = 0
 
-    y_bar: float = jax.numpy.sum(y) / len(y)
-    x_bar: float = jax.numpy.sum(x) / len(x)
+    x_bar: float = np.mean(x)
+    y_bar: float = np.mean(y)
 
     for i in range(0, len(x) - 1):
         x_diff: float = x[i] - x_bar
@@ -18,10 +17,10 @@ def get_slope(x: list, y: list) -> float:
         x_diff: float = x[i] - x_bar
         sum_xx += x_diff * x_diff
 
-    return sum_xx / sum_xy
+    return sum_xy / sum_xx
 
 
 # x = np.array([1, 2, 3, 4, 5])
-# y = np.array([1, 2, 3, 4, 5])
+# y = np.array([2, 4, 6, 8, 10])
 
-# print(get_slope(x, y))  # should be 1
+# print(get_slope(x, y))  # should be 2
