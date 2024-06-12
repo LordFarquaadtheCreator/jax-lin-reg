@@ -1,4 +1,5 @@
 from app import main
+from timeit import timeit
 
 if __name__ == "__main__":
     import jax.numpy as jnp
@@ -8,4 +9,11 @@ if __name__ == "__main__":
 
     func = main(x, y)
 
-    func(6)
+    fahad = func(6)
+    time = timeit(func(6), number=10000)
+
+
+    print(f"Result: {fahad} | Expected: 12")
+    print(f"Runtime: {time}")
+
+
