@@ -1,3 +1,7 @@
+from timer import timer
+
+
+@timer
 def main(x: list, y: list):
     """
     univariate linear regression model
