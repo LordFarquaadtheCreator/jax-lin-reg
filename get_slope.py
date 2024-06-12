@@ -1,5 +1,6 @@
 def get_slope(x: list, y: list) -> float:
     import jax.numpy as np
+
     sum_xy: int = 0
     sum_xx: int = 0
 
@@ -18,6 +19,7 @@ def get_slope(x: list, y: list) -> float:
     return sum_xy / sum_xx
 
 
+# import jax.numpy as np
 # x = np.array([1, 2, 3, 4, 5])
 # y = np.array([2, 4, 6, 8, 10])
 
