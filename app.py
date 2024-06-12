@@ -1,1 +1,1 @@
-import jax as jnp
+import jax.numpy as jnp
